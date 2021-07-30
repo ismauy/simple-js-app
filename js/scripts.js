@@ -21,7 +21,7 @@ let pokemonList = [
   {
   	name: 'Natu',
   	height: 20,
-  	types: ['Psychic', 'flying']
+  	types: ['psychic', 'flying']
   },
 
   {
