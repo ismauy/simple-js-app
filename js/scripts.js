@@ -31,10 +31,17 @@ let pokemonList = [
   },
 ]
 
-for (let i = 0; i < pokemonList.length; i++){
-	if (pokemonList[i].height > 80) {
-		document.write(`<p> ${pokemonList[i].name} (height: ${pokemonList[i].height}") - I am the tallest pokemon! </p>`);
-	} else {
-		document.write(`<p> ${pokemonList[i].name} (height: ${pokemonList[i].height}")</p>`);
-	}
+document.write('<ul>');
+for (let i = 0; i < pokemonList.length; i++) {
+  let currentPokemon = pokemonList[i];
+
+  document.write(`
+    <li>
+      ${currentPokemon.name} (height: <span>${currentPokemon.height}</span>)
+  `);
+  if (currentPokemon.height > 70) {
+    document.write(' - I am the tallest pokemon!');
+  }
+  document.write('</li>');
 }
+document.write('</ul>');
