@@ -1,3 +1,4 @@
+
 .button-Pokemon {
   border: none;
   background-color: yellow;
@@ -12,3 +13,14 @@
   background-color: green;
   color: white;
 }
+
+
+.button-Pokemon:hover {
+  background-color: red;
+}
+
+button:hover, button:focus, .button-Pokemon:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
