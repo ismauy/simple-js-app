@@ -37,7 +37,6 @@ let pokemonRepository = (function() {
     }).then(function (json) {
       pokemon.height = json.height;
       pokemon.imageUrl =  json.sprites.front_default;
-      console.log(pokemon);
       return json;
     }).catch(function (e) {
       console.error(e);
@@ -48,7 +47,7 @@ let pokemonRepository = (function() {
 
   function showDetails(pokemon){
     loadDetails(pokemon).then(function (pokemonDetails) {
-      console.log(pokemonDetails);
+      console.log(pokemon);
     })
   }
 
