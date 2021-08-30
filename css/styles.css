@@ -1,3 +1,17 @@
+.pg-hdr {
+  text-align: center;
+}
+
+.pg-footer {
+    text-align: center;
+    background-color: #E5D7DB;
+    padding-bottom: 15px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
 
 .button-Pokemon {
   border: none;
@@ -22,133 +36,67 @@
 button:hover, button:focus, .button-Pokemon:hover, button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
+  /* reduces the opacity of the button to 80 */
   opacity: 0.8;
+
 
 
   /* shared code start */
   @media all and (max-width: 1450px) {
-    .grid-work {
-      grid-gap: 10px;
-    }
 
-    h1 {
-      font-size: 22px;
-    }
-    h2 {
-      font-size: 18px;
-    }
-    .project-link {
-      display: inline-block;
-    }
-    svg {
-      width: 90%;
-    }
-  }
-  /* shared code end */
-
-  /* Smartphones */
-  @media all and (max-width: 499px) {
-    .grid-work {
-      grid-template-columns: 1fr;
-      margin: 10px;
-      padding-bottom: 120px;
-    }
-    .profile__text {
-      clear: both;
-    }
-
-
-    .profile {
-      float: none;
-      padding-top: 90px;
-      padding-bottom: 125px;
-      text-align: center;
-    }
-
-    .profile__portrait {
-      float: none;
-      margin: auto;
-    }
-
-    .page-header img {
+    .pg-header img {
       width: 20%;
       height: auto;
       align-self: center;
     }
+  }
 
-    .about-me {
-      padding-top: 85px;
-      padding-bottom: 85px;
+
+  /* Smartphones */
+  @media all and (max-width: 499px) {
+
+    .pg-header img {
+      width: 20%;
+      height: auto;
+      align-self: center;
     }
 
   }
 
   /* Tablets */
   @media all and (min-width: 500px) and (max-width: 770px) {
-    .grid-work {
-      grid-template-columns: 1fr 1fr;
-    }
 
-    .profile {
-      float: none;
-      padding-top: 90px;
-      padding-bottom: 125px;
-      text-align: center;
-    }
-
-    .profile__portrait {
-      float: none;
-      margin: auto;
-    }
-
-    .page-header img {
+    .pg-header img {
       width: 20%;
       height: auto;
       align-self: center;
     }
 
-    .contact-me {
-      padding-bottom: 120px;
-      float: none;
-    }
   }
 
   /* Tablets PRO */
   @media all and (min-width: 500px) and (max-width: 1025px) {
-    .grid-work {
-      grid-template-columns: 1fr 1fr;
-    }
 
-    .profile {
-      float: none;
-      padding-top: 90px;
-      padding-bottom: 125px;
-      text-align: center;
-    }
-
-    .profile__portrait {
-      float: none;
-      margin: auto;
-    }
-
-    .page-header img {
+    .pg-header img {
       width: 20%;
       height: auto;
       align-self: center;
     }
-  }
-
 
   /* smaller Laptops */
   @media all and (min-width: 768px) and (max-width: 1279px) {
-    .grid-work {
-      grid-template-columns: 1fr 1fr 1fr;
+
+    .pg-header img {
+      width: 60%;
+      height: auto;
+      align-self: center;
     }
-  }
+
   /* bigger Laptops */
   @media all and (min-width: 1280px)  {
-    .grid-work {
-      grid-template-columns: 1fr 1fr 1fr;
+
+    .pg-header img {
+      width: 80%;
+      height: auto;
+      align-self: center;
     }
-  }
