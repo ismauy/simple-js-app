@@ -41,11 +41,17 @@ button:hover, button:focus, .button-Pokemon:hover, button:focus {
 }
 
 
+.pokemon-list {
+  list-style-type: none;
+}
+
+
 /* MODAL CODE */
 
 html,
 body {
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 
