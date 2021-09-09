@@ -19,11 +19,15 @@ let pokemonRepository = (function() {
 
 
   function addListItem(pokemon){
-    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonList = document.querySelector('#pokemon-list');
     let listPokes = document.createElement('li');
+    listPokes.classList.add('list-group-item');
     let buttonPks = document.createElement('button');
     buttonPks.innerText = pokemon.name;
-    buttonPks.classList.add('button-Pokemon');
+    buttonPks.classList.add('btn');
+    buttonPks.classList.add('btn-warning');
+    buttonPks.setAttribute('data-toggle','modal');
+    buttonPks.setAttribute('data-target','#modal-container');
     listPokes.appendChild(buttonPks);
     pokemonList.appendChild(listPokes);
     buttonPks.addEventListener('click', function(eventClick){
@@ -47,18 +51,22 @@ let pokemonRepository = (function() {
 
   function showDetails(pokemon){
     loadDetails(pokemon).then(function (pokemonDetails) {
+
       let modalContainer = document.querySelector('#modal-container');
 
       modalContainer.innerHTML = '';
-
+      let modalDialog = document.createElement('div');
+      modalDialog.classList.add('modal-dialog');
       let modal = document.createElement('div');
-      modal.classList.add('modal');
+      modal.classList.add('modal-content');
+
+
 
       /* Modal closing */
       let closeButtonElement = document.createElement('button');
       closeButtonElement.classList.add('modal-close');
       closeButtonElement.innerText = 'Close';
-      closeButtonElement.addEventListener('click', hideModal);
+      closeButtonElement.setAttribute('data-dismiss','modal');
 
 
       /* Modal content */
@@ -75,9 +83,10 @@ let pokemonRepository = (function() {
       modal.appendChild(pkName);
       modal.appendChild(pkImg);
       modal.appendChild(pkHeight);
-      modalContainer.appendChild(modal);
+      modalDialog.appendChild(modal);
+      modalContainer.appendChild(modalDialog);
 
-      modalContainer.classList.add('is-visible');
+      // modalContainer.classList.add('is-visible');
 
     })
   }
