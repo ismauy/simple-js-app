@@ -12,6 +12,9 @@
     bottom: 0;
   }
 
+.btn-size {
+    width: 40%;
+}
 
 /* MODAL CODE */
 
@@ -21,79 +24,3 @@ body {
   text-align: center;
   padding-bottom: 20px;
 }
-
-
-
-
-  /* shared code start */
-  @media all and (max-width: 1450px) {
-
-    .pg-header img {
-      width: 20%;
-      height: auto;
-      align-self: center;
-    }
-  }
-
-
-  /* Smartphones */
-  @media all and (max-width: 499px) {
-
-    .pg-header img {
-      width: 20%;
-      height: auto;
-      align-self: center;
-    }
-
-    .modal {
-      width: 60%;
-    }
-  }
-
-  /* Tablets */
-  @media all and (min-width: 500px) and (max-width: 770px) {
-
-    .pg-header img {
-      width: 20%;
-      height: auto;
-      align-self: center;
-    }
-
-    .modal {
-      width: 60%;
-    }
-  }
-
-  /* Tablets PRO */
-  @media all and (min-width: 500px) and (max-width: 1025px) {
-
-    .pg-header img {
-      width: 20%;
-      height: auto;
-      align-self: center;
-    }
-
-    .modal {
-      width: 40%;
-    }
-  }
-
-  /* smaller Laptops */
-  @media all and (min-width: 768px) and (max-width: 1279px) {
-
-    .pg-header img {
-      width: 60%;
-      height: auto;
-      align-self: center;
-    }
-  }
-
-  /* bigger Laptops */
-  @media all and (min-width: 1280px)  {
-
-    .pg-header img {
-      width: 80%;
-      height: auto;
-      align-self: center;
-    }
-  }
