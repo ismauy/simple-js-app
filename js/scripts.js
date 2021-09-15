@@ -17,8 +17,6 @@ let pokemonRepository = (function() {
     })
   }
 
-
-
   function addListItem(pokemon){
     let pokemonList = document.querySelector('#pokemon-list');
     let listPokes = document.createElement('li');
@@ -27,6 +25,7 @@ let pokemonRepository = (function() {
     buttonPks.innerText = pokemon.name;
     buttonPks.classList.add('btn');
     buttonPks.classList.add('btn-warning');
+    buttonPks.classList.add('btn-size');
     buttonPks.setAttribute('data-toggle','modal');
     buttonPks.setAttribute('data-target','#modal-container');
     listPokes.appendChild(buttonPks);
@@ -48,8 +47,6 @@ let pokemonRepository = (function() {
     })
   }
 
-
-
   function showDetails(pokemon){
     loadDetails(pokemon).then(function (pokemonDetails) {
 
@@ -58,17 +55,22 @@ let pokemonRepository = (function() {
       modalContainer.innerHTML = '';
       let modalDialog = document.createElement('div');
       modalDialog.classList.add('modal-dialog');
-      let modal = document.createElement('div');
-      modal.classList.add('modal-content');
-
-
+      let modalContent = document.createElement('div');
+      modalContent.classList.add('modal-content');
+      let modalHeader = document.createElement('div');
+      modalHeader.classList.add('modal-header');
+      let modalBody = document.createElement('div');
+      modalBody.classList.add('modal-body');
+      let modalFooter = document.createElement('div');
+      modalFooter.classList.add('modal-footer');
 
       /* Modal closing */
       let closeButtonElement = document.createElement('button');
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'Close';
+      closeButtonElement.classList.add('close');
       closeButtonElement.setAttribute('data-dismiss','modal');
-
+      let spanClose = document.createElement('span');
+      spanClose.innerText = 'x';
+      closeButtonElement.appendChild(spanClose);
 
       /* Modal content */
       let pkName = document.createElement('h1');
@@ -80,14 +82,15 @@ let pokemonRepository = (function() {
       let pkImg = document.createElement('img');
       pkImg.src = pokemon.imageUrl;
 
-      modal.appendChild(closeButtonElement);
-      modal.appendChild(pkName);
-      modal.appendChild(pkImg);
-      modal.appendChild(pkHeight);
-      modalDialog.appendChild(modal);
+      modalHeader.appendChild(pkName);
+      modalHeader.appendChild(closeButtonElement);
+      modalBody.appendChild(pkImg);
+      modalFooter.appendChild(pkHeight);
+      modalDialog.appendChild(modalContent);
       modalContainer.appendChild(modalDialog);
-
-      // modalContainer.classList.add('is-visible');
+      modalContent.appendChild(modalHeader);
+      modalContent.appendChild(modalBody);
+      modalContent.appendChild(modalFooter);
 
     })
   }
