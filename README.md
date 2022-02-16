@@ -1,5 +1,8 @@
 # Pokédex App
 
+## Live version
+https://ismauy.github.io/simple-js-app/
+
 ## Description
 
 This project is to portray a simple application that lists the original 150 Pokémon of the Kanto region including their height, types and moves while pulling information from an external API. The web application is created using HTML, CSS and JavaScript. Data is loaded from an external API and allows the user to view certain information about a specific Pokémon.
@@ -34,7 +37,7 @@ The app will be deployed to a publicly accessible platform like GitHub Pages
 
 The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11
 
-List of Technologies used
+## Built with
 
 HTML, CSS, JS
 
